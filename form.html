@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Seguimiento Académico - UMSA</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #003366; /* Fondo azul oscuro */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 450px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 80px; /* Ajusta el tamaño del logo */
+            height: auto;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #003366; /* Azul UMSA */
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #d32f2f; /* Rojo UMSA */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #b71c1c; /* Rojo más oscuro al pasar el mouse */
+        }
+
+        .security-code {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .security-code input[type="text"] {
+            flex: 1;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="Logo_Umsa.png" alt="Logo de la UMSA">
+        </div>
+        <h2>SISTEMA DE SEGUIMIENTO ACADÉMICO</h2>
+        <form id="login-form">
+            <input type="text" placeholder="Usuario" required>
+            <input type="password" placeholder="Password" required>
+            <div class="security-code">
+                <input type="text" placeholder="Código de seguridad" required>
+                <button type="button" onclick="refreshCode()">🔄</button>
+            </div>
+            <input type="submit" value="INGRESAR">
+        </form>
+        <div class="footer">
+            Web 2.0 - Sistema de Seguimiento Académico<br>
+            Derechos reservados © Universidad Mayor de San Andrés
+        </div>
+    </div>
+    <script>
+        function refreshCode() {
+            alert("Código de seguridad actualizado."); // Simulación de actualización del código de seguridad
+        }
+
+        document.getElementById("login-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            // Redirigir a otra página
+            window.location.href = "index.html"; // Cambia por la URL o archivo de destino
+        });
+    </script>
+</body>
+</html>

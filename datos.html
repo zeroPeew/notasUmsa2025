@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Datos Personales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #333;
+        }
+        header p {
+            color: #666;
+        }
+        .profile-pic {
+            display: block;
+            margin: 0 auto 20px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-image: url('foto.jpg'); /* Ruta a tu imagen */
+            background-size: cover; /* Asegura que la imagen cubra el círculo */
+            background-position: center; /* Centra la imagen */
+            background-color: #ddd; /* Color de fondo en caso de que la imagen no cargue */
+            border: 2px solid #ccc; /* Opcional: borde decorativo */
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+        button {
+            padding: 10px 15px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Actualizar Datos Personales</h1>
+            <p>Te permite actualizar tus Datos Personales, llena cuidadosamente el formulario con los campos requeridos marcados con (*).</p>
+            <div class="profile-pic"></div>
+        </header>
+        <form id="personalDataForm">
+            <div>
+                <label for="ci">Cédula *</label>
+                <input type="text" id="ci" name="ci" value="11073417" required>
+            </div>
+            <div>
+                <label for="paterno">Apellido Paterno *</label>
+                <input type="text" id="paterno" name="paterno" value="MAMANI" required>
+            </div>
+            <div>
+                <label for="materno">Apellido Materno *</label>
+                <input type="text" id="materno" name="materno" value="MAMANI" required>
+            </div>
+            <div>
+                <label for="nombres">Nombres *</label>
+                <input type="text" id="nombres" name="nombres" value="IMANOL SEBASTIAN" required>
+            </div>
+            <div>
+                <label for="fechaNacimiento">Fecha de Nacimiento *</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="2004-05-11" required>
+            </div>
+            <div>
+                <label for="genero">Género *</label>
+                <select id="genero" name="genero" required>
+                    <option value="MASCULINO" selected>Masculino</option>
+                    <option value="FEMENINO">Femenino</option>
+                    <option value="OTRO">Otro</option>
+                </select>
+            </div>
+            <div>
+                <label for="correo">Correo Electrónico *</label>
+                <input type="email" id="correo" name="correo" value="imananim3@fcpn.edu.bo" required>
+            </div>
+            <div>
+                <label for="celular">Celular *</label>
+                <input type="text" id="celular" name="celular" value="75805419" required>
+            </div>
+            <div>
+                <label for="numeroDiploma">Número de Diploma de Bachiller *</label>
+                <input type="text" id="numeroDiploma" name="numeroDiploma" value="" required>
+            </div>
+            <div>
+                <label for="direccion">Dirección *</label>
+                <input type="text" id="direccion" name="direccion" value="Z. Achachicala C. Teniente Delgadillo N° 1989" required>
+            </div>
+            <div>
+                <label for="tituloAcademico">Título Académico *</label>
+                <select id="tituloAcademico" name="tituloAcademico" required>
+                    <option value="UNIVERSITARIO" selected>Universitario</option>
+                    <option value="BACHILLER">Bachiller</option>
+                    <option value="TECNICO">Técnico</option>
+                </select>
+            </div>
+            <div>
+                <label for="grupoSanguineo">Grupo Sanguíneo</label>
+                <select id="grupoSanguineo" name="grupoSanguineo">
+                    <option value="RH+" selected>RH+</option>
+                    <option value="RH-">RH-</option>
+                </select>
+            </div>
+            <button type="submit">Guardar Datos</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('personalDataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Datos guardados exitosamente.');
+        });
+    </script>
+</body>
+</html>
